@@ -1,0 +1,34 @@
+[GERMAN ONLY http://en.wikipedia.org/wiki/Reverse_Polish_notation FOR BASIC INFO]
+
+RPN (Reverse Polish Notation) ist eine Alternative zur normalerweise
+gebrauchlichen Infix-Notation (3 + 4). Dabei werden die Operatoren an
+das Ende der Gleichung gezogen. Vorteile davon sind:
+  * Einfacher zu programmieren (eigentlich 1:1 Forth-artiger Syntax;
+    Der Rechner ist im Prinzip eine Mini-Forth Version bei der man
+    keine neuen Woerter definieren kann.)
+  * (angeblich) schneller, wenn man sich daran gewoehnt hat
+
+Funktion:
+Es gibt einen so genannten Stack (Stapel) auf den Werte gepusht (gelegt)
+werden. Ausserdem gibt es noch Befehle die etwas vom Stack poppen (nehmen)
+und eventuell wieder etwas darauf pushen.
+Geben wir also den Befehls-String "5 5 + =" ein, so zeigt uns der Rechner
+das Ergebnis 10 an. Intern pusht er zunaechst zweimal eine 5 auf den Stack.
+Dann fuehrt er den Befehl "+" aus, der zwei Werte vom Stack nimmt und die
+Summe der Beiden zurueck auf den Stack legt. Nun erfolgt noch die Ausgabe
+mit dem Befehl "=" (ein Wert vom Stack, optional am Ende).
+
+Vorhandene Befehle:
++     addieren
+-     subtrahieren
+*     multiplizieren
+/     dividieren
+sqr   square = Quadrad
+sqrt  squareroot = Quadratwurzel
+=     Zeige letzten Wert vom Stack an.
+dub   nimm den letzten Wert vom Stack und pushe ihn zweimal wieder darauf
+      (nuetzlich wenn man "dub =" eingibt um Zwischenergebnisse anzeigen
+       zu lassen)
+!     Fuakultaet
+info  Zeige Info-Screen
+exit  Beende das Programm
